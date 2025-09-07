@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Footer */}
         <footer className="p-4 bg-gray-800 text-white text-center">
-          © 2025 Belajar Next.js
+          © 2025 Curhatins App💜
         </footer>
       </body>
     </html>
