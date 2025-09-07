@@ -9,7 +9,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -65,11 +69,20 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Nav */}
+        {/* Mobile Nav */}
         <div className="md:hidden">
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
-              <Button variant="ghost" size="icon">
-                {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white hover:text-black transition-colors"
+              >
+                {open ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
                 <span className="sr-only">Toggle Menu</span>
               </Button>
             </PopoverTrigger>
@@ -86,7 +99,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="px-3 py-2 text-sm font-medium text-white rounded-md transition-colors
-                               hover:bg-blue-500 hover:text-white"
+                       hover:bg-blue-500 hover:text-white"
                   >
                     {link.label}
                   </Link>
