@@ -1,19 +1,15 @@
-import Link from "next/link"
 import "./globals.css"
+import Navbar from "../../components/Navbar"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
-        {/* Header/Navbar */}
-        <header className="p-4 bg-blue-600 text-white flex gap-4">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
-        </header>
+      <body className="flex flex-col min-h-screen bg-gray-900">
+        {/* Navbar */}
+        <Navbar />
 
         {/* Konten halaman */}
-        <main className="p-6 min-h-screen bg-gray-50">
+        <main className="flex-1 bg-gray-900">
           {children}
         </main>
 

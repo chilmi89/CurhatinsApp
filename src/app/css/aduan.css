@@ -1,0 +1,16 @@
+/* aduan.css */
+@keyframes fall {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(110vh); opacity: 0; }
+}
+
+.animate-fall {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.neon-glow {
+  text-shadow: 0 0 5px #facc15, 0 0 10px #fbbf24, 0 0 20px #f59e0b;
+}

@@ -1,0 +1,14 @@
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white; /* kursor */
+  width: 0; /* mulai dari 0 */
+  animation: typing 4s steps(29, end) infinite; /* steps = jumlah karakter */
+}
+
+@keyframes typing {
+  0%, 10% { width: 0; }        /* mulai dari kiri */
+  50%, 60% { width: 29ch; }    /* sampai akhir teks */
+  100% { width: 0; }            /* langsung restart dari kiri */
+}
